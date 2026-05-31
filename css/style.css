@@ -37,8 +37,8 @@
   --action-gradient: linear-gradient(135deg, #ff7300 0%, #cc5500 100%);
 
   /* Fontes */
-  --title-font: "Playfair Display", serif;
-  --font-body: "Montserrat", sans-serif;
+  --title-font: "Outfit", sans-serif;
+  --font-body: "Inter", sans-serif;
 
   /* Layout Constantes */
   --max-width: 900px;
@@ -148,6 +148,92 @@ section {
 .fade-up.visible { opacity: 1; transform: translateY(0); }
 
 /* --- 5. COMPONENTES --- */
+.floating-share {
+  position: fixed;
+  left: 20px;
+  top: 20px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 15px;
+}
+
+.share-main-btn {
+  background: var(--action-gradient);
+  color: var(--btn-text-solid);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  cursor: pointer;
+  box-shadow: 0 10px 20px var(--accent-glow);
+  z-index: 2;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.share-main-btn:hover {
+  transform: scale(1.1);
+}
+
+.share-menu {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  background: var(--section-bg-color);
+  padding: 10px 15px;
+  border-radius: 30px;
+  border: 1px solid var(--border-glass);
+  box-shadow: var(--shadow-soft);
+  opacity: 0;
+  transform: translateX(-20px) scale(0.9);
+  pointer-events: none;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.share-menu.active {
+  opacity: 1;
+  transform: translateX(0) scale(1);
+  pointer-events: auto;
+}
+
+.share-menu a {
+  color: var(--text-main-color);
+  font-size: 1.2rem;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--card-bg-color);
+  transition: all 0.3s ease;
+}
+
+.share-menu a:hover {
+  color: var(--btn-text-solid);
+  background: var(--accent-color);
+  transform: translateY(-3px);
+}
+
+@media (max-width: 768px) {
+  .floating-share {
+    left: 15px;
+  }
+  
+  .share-menu {
+    transform: translateX(-20px) scale(0.9);
+  }
+  
+  .share-menu.active {
+    transform: translateX(0) scale(1);
+  }
+}
+
 .card {
   background: var(--card-bg-color);
   border: 1px solid var(--border-glass);
@@ -302,7 +388,7 @@ section {
   scroll-snap-type: x mandatory; /* Scroll nativo no Mobile */
 }
 .carousel-wrapper::-webkit-scrollbar { display: none; }
-.carousel-track { display: flex; gap: 20px; }
+.carousel-track { display: flex; gap: 20px; align-items: stretch; }
 
 /* Metodologia e Planos Cards */
 .service-card, .plan-card {
@@ -316,6 +402,7 @@ section {
   display: flex;
   flex-direction: column;
   text-align: center;
+  height: auto;
 }
 .service-card { gap: 15px; }
 .service-card:hover { transform: translateY(-5px); border-color: var(--accent-color); background: var(--gradient-featured); }
@@ -405,8 +492,8 @@ footer {
   .stat-item { padding: 8px 10px; min-width: 80px; }
   .stat-number { font-size: 1.2rem; }
   
-  .service-card, .plan-card { flex: 0 0 85vw; }
-  .result-card { flex: 0 0 85vw; padding: 15px; }
+  .service-card, .plan-card { flex: 0 0 85vw; height: auto; min-height: 100%; }
+  .result-card { flex: 0 0 85vw; padding: 15px; height: auto; min-height: 100%; }
   .result-img-wrapper { height: 280px; }
   
   .form-row { flex-direction: column; gap: 0; }

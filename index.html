@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     
-    <title>Vianna Personal | Consultoria Premium</title>
-    <meta name="description" content="Vianna Personal. Especialista em emagrecimento, saúde e performance. Metodologia híbrida e acompanhamento completo.">
+    <title>Studio Impulso | Consultoria Premium</title>
+    <meta name="description" content="Studio Impulso. Especialista em emagrecimento, saúde e performance. Metodologia híbrida e acompanhamento completo.">
     <meta name="robots" content="index, follow">
 
     <meta name="theme-color" content="#ff7300" media="(prefers-color-scheme: light)">
@@ -14,10 +14,23 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,800;1,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
+    <!-- Botão de Compartilhar -->
+    <div class="floating-share">
+        <button class="share-main-btn" onclick="toggleShareMenu()" aria-label="Compartilhar">
+            <i class="fas fa-share-alt"></i>
+        </button>
+        <div class="share-menu" id="shareMenu">
+            <a href="javascript:void(0)" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="javascript:void(0)" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="javascript:void(0)" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+            <a href="javascript:void(0)" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+    </div>
 
     <button class="theme-toggle" onclick="toggleTheme()" aria-label="Alternar Tema">
         <i class="fas fa-sun"></i>
@@ -29,8 +42,8 @@
             <figure class="hero-profile-container">
                 <img src="image/perfil.jpeg" alt="Tatiane Personal" class="hero-profile-pic">
             </figure>
-            <img src="image/logo.jpeg" alt="Vianna Personal" class="hero-logo" onerror="this.style.display='none'">
-            <h1>Tatiane Vianna Personal</h1>
+            <img src="image/logo.jpeg" alt="Studio Impulso" class="hero-logo" onerror="this.style.display='none'">
+            <h1>Studio Impulso</h1>
             <p class="hero-bio">Especialista em emagrecimento feminino e Studio Fitness especializado.</p>
             
             <nav class="action-grid">
@@ -205,7 +218,7 @@
         <div class="footer-socials">
             <a href="https://instagram.com/viannapersonal" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
         </div>
-        <p>&copy; 2026 Vianna Personal Trainer. Todos os direitos reservados.</p>
+        <p>&copy; 2026 Studio Impulso. Todos os direitos reservados.</p>
         <p style="margin-top:5px; opacity:0.5; font-size:0.7rem;">Desenvolvido pela <a href="https://www.instagram.com/coutinho.tech22/" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none;">Coutinho Tech</a></p>
     </footer>
     <script src="./js/script.js"></script>

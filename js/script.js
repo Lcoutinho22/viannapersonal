@@ -16,6 +16,11 @@ document.addEventListener('DOMContentLoaded', () => {
             icon.classList.toggle('fa-moon');
         }
 
+        function toggleShareMenu() {
+            const menu = document.getElementById('shareMenu');
+            menu.classList.toggle('active');
+        }
+
         function escolherPlano(plano) {
             const mensagem = `Olá Tatiane! Gostaria de saber mais informações e garantir minha vaga no serviço: *${plano}*.`;
             window.open(`https://wa.me/553399999193?text=${encodeURIComponent(mensagem)}`, '_blank');
